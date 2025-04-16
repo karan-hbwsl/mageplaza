@@ -3,6 +3,6 @@
  use Magento\Framework\Component\ComponentRegistrar;
  ComponentRegistrar::register(
      ComponentRegistrar::MODULE,
-     'Macadcd_Jumpstart',
+     'Macad_Jumpstart',
      __DIR__,
  );
