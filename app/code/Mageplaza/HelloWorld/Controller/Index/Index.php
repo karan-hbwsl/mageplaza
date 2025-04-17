@@ -36,12 +36,13 @@ class Index extends Action
     }
 
 
-     /** 
-      * Check if the user has permission to access this controller
-      */
-      protected function _isAllowed()
-      {
-          return $this->_authorization->isAllowed('Mageplaza_HelloWorld::helloworld');
-      }
-  
+    /** 
+     * Check if the user has permission to access this controller
+    */
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Mageplaza_HelloWorld::helloworld');
+    }
+
+    const ADMIN_RESOURCE = 'Mageplaza_HelloWorld::post';
 }

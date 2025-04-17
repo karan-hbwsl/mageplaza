@@ -17,4 +17,9 @@
      {
          return $this->_pageFactory->create();
      }
+
+     protected function _isAllowed()
+     {
+         return $this->_authorization->isAllowed('Mageplaza_HelloWorld::post_display');
+     }
  }

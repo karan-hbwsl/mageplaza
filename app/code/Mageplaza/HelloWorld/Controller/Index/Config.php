@@ -20,4 +20,9 @@
          echo $this->helperData->getGeneralConfig('display_text');
          exit();
      }
+
+     protected function _isAllowed()
+     {
+         return $this->_authorization->isAllowed('Mageplaza_HelloWorld::post_config');
+     }
  }
