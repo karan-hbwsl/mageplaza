@@ -32,6 +32,12 @@ class Index extends Action
             echo "</pre>";
         }
 
+        // Set custom page title
+        $this->_view->loadLayout();
+        $this->_view->getLayout()->getBlock('page.main.title')->setPageTitle('DemoWidget');
+        
+        $this->_view->renderLayout();
+
         return $this->_pageFactory->create();
     }
 
