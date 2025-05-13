@@ -4,11 +4,11 @@
         <title>Layout Example</title>
     </head>
     <body>
-        <referenceBlock name="page.main.title">
+        <!-- <referenceBlock name="page.main.title">
             <action method="setPageTitle">
                 <argument name="page_title" xsi:type="string">Something Else</argument>
             </action>
-        </referenceBlock>
+        </referenceBlock> -->
         <!-- <referenceBlock name="page.main.title" remove="true" /> -->
         <referenceContainer name="content">
             <block name="layout_example" class = "Magento\Framework\View\Element\Template" template="Training_LayoutExample::content.phtml" />

@@ -19,9 +19,9 @@ class Index implements ActionInterface
 
     public function execute(): ResultInterface
     {
-        $result = $this->resultFactory->create();
-        $result->getConfig()->getTitle()->set('Alaa Al-Maliki');
-        $result->getLayout()->getBlock('page.main.title')->setPageTitle("Magento Developer");
-        return $result;
+        // $result = $this->resultFactory->create();
+        // $result->getConfig()->getTitle()->set('Alaa Al-Maliki');
+        // $result->getLayout()->getBlock('page.main.title')->setPageTitle("Magento Developer");
+        return $this->resultFactory->create();
     }
 }
