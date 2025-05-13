@@ -5,18 +5,21 @@ declare(strict_types=1);
 namespace Training\Example\Controller\Index;
 
 use Magento\Framework\App\ActionInterface;
+use Magento\Framework\Controller\ResultInterface;
+use Magento\Framework\Controller\Result\ForwardFactory;
 
-class Page implements ActionInterface
+class Forward implements ActionInterface
 {
-    protected $forwardFactory;
+    private ForwardFactory $forwardFactory;
 
-    public function __construct(\Magento\Framework\Controller\Result\ForwardFactory $forwardFactory)
+    public function __construct(ForwardFactory $forwardFactory)
     {
         $this->forwardFactory = $forwardFactory;
     }
 
     public function execute(): ResultInterface
     {
-        return $this->forwardFactory->create()->forward('page');
+        $forward = $this->forwardFactory->create();
+        return $forward->forward('page');
     }
 }
